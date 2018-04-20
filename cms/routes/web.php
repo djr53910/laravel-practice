@@ -47,13 +47,13 @@ Route::post('/books', function (Request $request) {
 });
 
 /**
- * 本を削除git 
+ * 本を削除git
  */
  
-Route::delete('book/[book]', function (Book $book) {
-    //
+
+Route::delete('/book/{book}', function (Book $book) {
+    $book->delete();
+    return redirect('/');
 });
-
-
 
 ?>

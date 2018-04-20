@@ -59,7 +59,14 @@
                                 
                                 <!-- 本: 削除ボタン -->
                                 <td>
-                                
+                                    <form action="{{ url('book/'.$book->id) }}" method="POST">
+                                        {{ csrf_field() }}
+                                        {{ method_field('DELETE') }}
+
+                                        <button type="submit" class="btn btn-danger"> <i class="glyphicon glyphicon-trash"></i> 
+                                            削除
+                                        </button>
+                                    </form>
                                 </td>
                             </tr>
                          @endforeach
