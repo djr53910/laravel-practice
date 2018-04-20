@@ -47,7 +47,7 @@ Route::post('/books', function (Request $request) {
 });
 
 /**
- * 本を削除
+ * 本を削除git 
  */
  
 Route::delete('book/[book]', function (Book $book) {
